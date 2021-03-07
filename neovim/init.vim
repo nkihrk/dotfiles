@@ -22,7 +22,7 @@ nnoremap /  /\v
 
 " Visualize tabs, blanks, and return
 set list
-set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+set listchars=trail:_,extends:>,precedes:<,nbsp:%
 
 " Reload files if modified by ohters
 set autoread

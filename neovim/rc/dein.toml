@@ -215,9 +215,9 @@ hook_add = '''
 	endif
 '''
 
-[[plugins]]
-repo = 'tomasr/molokai'
-hook_add = 'let g:rehash256 = 1'
+#[[plugins]]
+#repo = 'tomasr/molokai'
+#hook_add = 'let g:rehash256 = 1'
 
 [[plugins]]
 repo = 'luochen1990/rainbow'
