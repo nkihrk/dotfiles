@@ -17,10 +17,10 @@
 # fisher - https://github.com/jorgebucaran/fisher
 # nvm.fish - https://github.com/jorgebucaran/nvm.fish
 
-# BROWSER - google-chrome-stable
+# BROWSER - google-chrome
 # EDITOR - neovim
+# VISUAL - neovim
 # MAIL - thunderbird
-# VISUAL - kate
 
 
 ### system
