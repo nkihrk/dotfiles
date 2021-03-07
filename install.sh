@@ -11,6 +11,7 @@
 ### Dependencies
 
 ## For Tmux
+## Use <prefix> I to install plugins via the Tmux Plugin Manager
 # tpm - https://github.com/tmux-plugins/tpm
 
 ## For NeoVim
