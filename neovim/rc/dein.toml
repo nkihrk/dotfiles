@@ -161,10 +161,10 @@ repo = 'posva/vim-vue'
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
 
-#[[plugins]]
-#repo = 'mhartington/nvim-typescript'
-#build = './install.sh'
-#hook_add = 'lt g:nvim_typescript#vue_support = 1'
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+build = './install.sh'
+hook_add = 'let g:nvim_typescript#vue_support = 1'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
