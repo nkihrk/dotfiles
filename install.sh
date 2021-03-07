@@ -2,6 +2,7 @@
 
 ### Prerequisites for dotfiles
 
+# Alacritty - https://github.com/alacritty/alacritty
 # Tmux - https://github.com/tmux/tmux
 # Fish - https://github.com/fish-shell/fish-shell
 # NeoVim - https://github.com/neovim/neovim
@@ -37,6 +38,10 @@
 
 # load fcitx-mozc configs
 ln -sf ~/dotfiles/.xprofile ~/.xprofile
+
+
+## Alacritty
+ln -sf ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 
 ### Tmux
