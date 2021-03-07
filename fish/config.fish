@@ -23,7 +23,9 @@ set --universal nvm_default_version lts/fermium
 
 
 ## Set yarn bin path
-set -x PATH $HOME/.yarn/bin $PATH
+if not contains -- $HOME/.yarn/bin $fish_user_paths
+    set -Ux fish_user_paths $HOME/.yarn/bin $fish_user_paths
+end
 
 
 ## Add $HOME/.pyenv to PYENV_ROOT
