@@ -81,8 +81,8 @@ function pk
 end
 
 
-## rewrite all to remove emails
-function rewrite_email_from_git
+## rewrite emails of the git logs
+function rewrite_email_git
 	git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='[id+username]@users.noreply.github.com'; GIT_COMMITTER_EMAIL='[id+username]@users.noreply.github.com';" --tag-name-filter cat -- --all
 end
 
