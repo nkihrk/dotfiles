@@ -54,7 +54,8 @@ function ghq_fzf_repo -d 'Repository search'
   commandline -f repaint
 end
 
-## search histories with peco
+
+## select history with peco
 function peco_select_history
   if test (count $argv) = 0
     set peco_flags --layout=bottom-up
@@ -72,18 +73,24 @@ function peco_select_history
 end
 
 
-## fish key bindings
-function fish_user_key_bindings
-  bind \cg ghq_fzf_repo
-	bind \cr 'peco_select_history (commandline -b)'
-end
-
-
 ## Find a process and kill it
 function pk
   for pid in (ps aux | peco | awk '{ print $2 }');
     kill $pid & echo "Killed $pid";
   end
+end
+
+
+## rewrite all to remove emails
+function rewrite_email_from_git
+	git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='[id+username]@users.noreply.github.com'; GIT_COMMITTER_EMAIL='[id+username]@users.noreply.github.com';" --tag-name-filter cat -- --all
+end
+
+
+## fish key bindings
+function fish_user_key_bindings
+  bind \cg ghq_fzf_repo
+	bind \cr 'peco_select_history (commandline -b)'
 end
 
 
