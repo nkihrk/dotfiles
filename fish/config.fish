@@ -41,15 +41,45 @@ status --is-interactive; and pyenv virtualenv-init - | source
 
 ## To prevent fzf from comflicting with other functions' keybinds
 set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+set -U FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
+set -U FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 
 
-## Ctrl + r to search command histories
-function fish_user_key_bindings
-    bind \cr peco_select_history
+## ghq + fzf
+function ghq_fzf_repo -d 'Repository search'
+  ghq list --full-path | fzf --reverse --height=100% | read select
+  [ -n "$select" ]; and cd "$select"
+  echo " $select "
+  commandline -f repaint
+end
+
+## search histories with peco
+function peco_select_history
+  if test (count $argv) = 0
+    set peco_flags --layout=bottom-up
+  else
+    set peco_flags --layout=bottom-up --query "$argv"
+  end
+
+  history|peco $peco_flags|awk '{c="";for(i=3;i<=NF;i++) c=c $i" "; print c}'|awk '{sub(/[ \t]+$/, "")}1'|read foo
+
+  if [ $foo ]
+    commandline $foo
+  else
+    commandline ''
+  end
 end
 
 
-# Find a process and kill it
+## fish key bindings
+function fish_user_key_bindings
+  bind \cg ghq_fzf_repo
+	bind \cr 'peco_select_history (commandline -b)'
+end
+
+
+## Find a process and kill it
 function pk
   for pid in (ps aux | peco | awk '{ print $2 }');
     kill $pid & echo "Killed $pid";

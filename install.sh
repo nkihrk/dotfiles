@@ -21,9 +21,10 @@
 
 ## Fish plugins
 # fisher - https://github.com/jorgebucaran/fisher
-# plugin peco for fish - https://github.com/oh-my-fish/plugin-peco ( fisher install oh-my-fish/plugin-peco )
 # z - https://github.com/jethrokuan/z
-# fzf - https://github.com/jethrokuan/fzf ( we need to install fzf first )
+# fzf - https://github.com/jethrokuan/fzf ( we need to install fzf and ripgrep first )
+# fish-bd - https://github.com/0rax/fish-bd
+# fish-ghq - https://github.com/decors/fish-ghq ( we need to install ghq first )
 
 
 ## For NVM
@@ -45,6 +46,10 @@
 
 # load fcitx-mozc configs
 ln -sf ~/dotfiles/.xprofile ~/.xprofile
+
+
+# Git config
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 
 ## Alacritty
