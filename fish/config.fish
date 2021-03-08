@@ -39,6 +39,24 @@ status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
 
 
+## To prevent fzf from comflicting with other functions' keybinds
+set -U FZF_LEGACY_KEYBINDINGS 0
+
+
+## Ctrl + r to search command histories
+function fish_user_key_bindings
+    bind \cr peco_select_history
+end
+
+
+# Find a process and kill it
+function pk
+  for pid in (ps aux | peco | awk '{ print $2 }');
+    kill $pid & echo "Killed $pid";
+  end
+end
+
+
 ## Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
   switch (commandline -t)

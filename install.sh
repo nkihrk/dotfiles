@@ -19,9 +19,15 @@
 # pyenv - https://github.com/pyenv/pyenv
 # pyenv-virtualenv - https://github.com/pyenv/pyenv-virtualenv
 
+## Fish plugins
+# fisher - https://github.com/jorgebucaran/fisher
+# plugin peco for fish - https://github.com/oh-my-fish/plugin-peco ( fisher install oh-my-fish/plugin-peco )
+# z - https://github.com/jethrokuan/z
+# fzf - https://github.com/jethrokuan/fzf ( we need to install fzf first )
+
+
 ## For NVM
 # nvm - https://github.com/nvm-sh/nvm
-# fisher - https://github.com/jorgebucaran/fisher
 # nvm.fish - https://github.com/jorgebucaran/nvm.fish
 
 ## For ALE
