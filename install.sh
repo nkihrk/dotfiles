@@ -26,59 +26,38 @@
 # fish-bd - https://github.com/0rax/fish-bd
 # fish-ghq - https://github.com/decors/fish-ghq ( we need to install ghq first )
 
-
 ## For NVM
 # nvm - https://github.com/nvm-sh/nvm
 # nvm.fish - https://github.com/jorgebucaran/nvm.fish
 
 ## For ALE
+## Install plugins below as global.
+## This will allow ALE to use plugins on any files
 # prettier - https://prettier.io/docs/en/vim.html#vim-prettier-installation
 # eslint - https://github.com/eslint/eslint
 
-## A .profile config
+## .profile
 # BROWSER - google-chrome
 # EDITOR - neovim
 # VISUAL - neovim
 # MAIL - thunderbird
 
 
-### System
-
-# load fcitx-mozc configs
-ln -sf ~/dotfiles/.xprofile ~/.xprofile
+### Notify start
+echo 'Installing...'
 
 
-# Git config
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+### Initialize
+#sh ./init.sh
 
 
-## Alacritty
-ln -sf ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+### Load
+sh ./load.sh
 
 
-### Tmux
-
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-
-
-### Fish
-
-# load envs
-ln -sf ~/dotfiles/.profile ~/.profile
-
-# Fish configs
-ln -sf ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
-ln -sf ~/dotfiles/fish/fish_variables ~/.config/fish/fish_variables
+### Install plugins
+#sh ./install-fish-plugins.sh
 
 
-### NeoVim
-
-# Create a directory for neovim configs
-mkdir ~/.config/nvim
-ln -sf ~/dotfiles/neovim/init.vim ~/.config/nvim/init.vim
-ln -sf ~/dotfiles/neovim/init.vim ~/.vimrc
-
-# Create a directory for dein tomls
-mkdir ~/.cache/dein/rc
-ln -sf ~/dotfiles/neovim/rc/dein.toml ~/.cache/dein/rc/dein.toml
-ln -sf ~/dotfiles/neovim/rc/dein_lazy.toml ~/.cache/dein/rc/dein_lazy.toml
+### Notify finish
+echo 'Installed successfully!'
