@@ -83,7 +83,13 @@ end
 
 ## rewrite emails of the git logs
 function rewrite_email_git
-	git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='[id+username]@users.noreply.github.com'; GIT_COMMITTER_EMAIL='[id+username]@users.noreply.github.com';" --tag-name-filter cat -- --all
+	git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='40584391+nkihrk@users.noreply.github.com'; GIT_COMMITTER_EMAIL='40584391+nkihrk@users.noreply.github.com';" --tag-name-filter cat -- --all
+end
+
+
+## rewrite names of the git logs
+function rewrite_name_git
+	git filter-branch --force --env-filter "GIT_AUTHOR_NAME='nkihrk'; GIT_COMMITTER_NAME='nkihrk';" --tag-name-filter cat -- --all
 end
 
 
