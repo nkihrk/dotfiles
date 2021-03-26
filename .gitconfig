@@ -2,5 +2,8 @@
 	email = 40584391+nkihrk@users.noreply.github.com
 	name = nkihrk
 
+[fetch]
+	prune = true
+
 [ghq]
 	root = ~/Repositories
