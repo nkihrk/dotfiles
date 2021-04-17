@@ -4,6 +4,10 @@
 
 .dotfiles hosted in this repository might be heavily relay on my Garuda Linux environment.<br>
 To know deeply about Garuda Linux, please check [their official website](https://garudalinux.org/).
+<br>
+
+Head Up:
+You need to rewrite user section(email and name) in .gitconfig.
 
 ## Installation
 
@@ -11,7 +15,6 @@ To know deeply about Garuda Linux, please check [their official website](https:/
 
 ```
 > sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
-
 ```
 
 Install tpm to manage tmux plugins
@@ -80,7 +83,7 @@ fisher install decors/fish-ghq
 
 ### Load config files
 
-This shell script will automatically create symlinks for config files and apply to appropriate directories
+This shell script will automatically create symlinks for config files and apply to appropriate directories.
 
 ```
 sh ./load.sh
