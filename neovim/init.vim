@@ -93,14 +93,6 @@ if !&compatible
   set nocompatible
 endif
 
-" Enable syntax highlighting
-syntax enable
-"highlight Normal ctermbg=none
-"highlight NonText ctermbg=none
-"highlight LineNr ctermbg=none
-"highlight Folded ctermbg=none
-"highlight EndOfBuffer ctermbg=none
-
 let g:python_host_prog=$PYENV_ROOT.'/versions/neovim-2/bin/python'
 let g:python3_host_prog=$PYENV_ROOT.'/versions/neovim-3/bin/python'
 
@@ -142,3 +134,10 @@ if dein#check_install()
   call dein#install()
 endif
 
+" Enable syntax highlighting
+syntax enable
+"highlight Normal ctermbg=none
+"highlight NonText ctermbg=none
+"highlight LineNr ctermbg=none
+"highlight Folded ctermbg=none
+"highlight EndOfBuffer ctermbg=none
