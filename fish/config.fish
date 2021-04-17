@@ -3,7 +3,7 @@ set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 ## Source .profile to apply its values
-source ~/.profile
+bass source ~/.profile
 
 
 ## Add ~/.local/bin to PATH

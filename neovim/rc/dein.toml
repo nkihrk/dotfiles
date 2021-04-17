@@ -234,10 +234,6 @@ hook_add = '''
 	endif
 '''
 
-#[[plugins]]
-#repo = 'tomasr/molokai'
-#hook_add = 'let g:rehash256 = 1'
-
 [[plugins]]
 repo = 'luochen1990/rainbow'
 hook_add = 'let g:rainbow_active = 1'
@@ -251,7 +247,7 @@ repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
 	let g:airline_powerline_fonts = 1
 	set laststatus=2
-	let g:airline_theme='molokai'
+	let g:airline_theme='minimalist'
 '''
 
 [[plugins]]
@@ -259,6 +255,7 @@ repo = 'edkolev/tmuxline.vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = 'highlight SignColumn guibg=none ctermbg=none'
 
 
 

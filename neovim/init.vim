@@ -2,10 +2,16 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-set fileencoding=utf-8 " 保存時の文字コード
-set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
-set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
-set ambiwidth=double " □や○文字が崩れる問題を解決
+" 256color and truecolor support for tmux
+"set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
+"set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
+"set t_Co=256                         " Enable 256 colors
+"set termguicolors                    " Enable GUI colors for the terminal to get truecolor
+
+set fileencoding=utf-8
+set fileencodings=ucs-boms,utf-8,euc-jp,cp932
+set fileformats=unix,dos,mac
+set ambiwidth=double
 
 " Set update time for vim-gitgutter
 " https://www.reddit.com/r/vim/comments/3ql651/what_do_you_set_your_updatetime_to/
@@ -42,14 +48,14 @@ set wildmenu
 "set whichwrap=b,s,h,l,<,>,[,]
 
 " Search word
-set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
-set smartcase " 検索パターンに大文字を含んでいたら大文字小文字を区別する
-set hlsearch " 検索結果をハイライト
-set ignorecase " 検索パターンに大文字小文字を区別しない
+set incsearch
+set smartcase
+set hlsearch
+set ignorecase
 set wrapscan
 set inccommand=split
 
-" ESCキー2度押しでハイライトの切り替え
+" Toggle highlight when double clicked a ESC key
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 " Color cursor line
@@ -86,6 +92,14 @@ endif
 if !&compatible
   set nocompatible
 endif
+
+" Enable syntax highlighting
+syntax enable
+"highlight Normal ctermbg=none
+"highlight NonText ctermbg=none
+"highlight LineNr ctermbg=none
+"highlight Folded ctermbg=none
+"highlight EndOfBuffer ctermbg=none
 
 let g:python_host_prog=$PYENV_ROOT.'/versions/neovim-2/bin/python'
 let g:python3_host_prog=$PYENV_ROOT.'/versions/neovim-3/bin/python'
@@ -128,11 +142,3 @@ if dein#check_install()
   call dein#install()
 endif
 
-" Syntax highlighting
-syntax enable
-"colorscheme molokai
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none
