@@ -19,7 +19,11 @@ source ("/usr/bin/starship" init fish --print-full-init | psub)
 
 
 ## Set NVM_DIR
-set --universal nvm_default_version lts/fermium
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
 
 
 ## Set yarn bin path

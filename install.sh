@@ -18,9 +18,12 @@
 # dein - https://github.com/Shougo/dein.vim
 # pyenv - https://github.com/pyenv/pyenv
 # pyenv-virtualenv - https://github.com/pyenv/pyenv-virtualenv
+# neovim (npm install -g neovim)
+# typescript (npm install -g typescript)
 
 ## Fish plugins
 # fisher - https://github.com/jorgebucaran/fisher
+# bass - https://github.com/edc/bass ( for fish to work properly with nvm )
 # z - https://github.com/jethrokuan/z
 # fzf - https://github.com/jethrokuan/fzf ( we need to install fzf and ripgrep first )
 # fish-bd - https://github.com/0rax/fish-bd
@@ -28,7 +31,6 @@
 
 ## For NVM
 # nvm - https://github.com/nvm-sh/nvm
-# nvm.fish - https://github.com/jorgebucaran/nvm.fish
 
 ## For ALE
 ## Install plugins below as global.
@@ -37,10 +39,8 @@
 # eslint - https://github.com/eslint/eslint
 
 ## .profile
-# BROWSER - google-chrome
 # EDITOR - neovim
 # VISUAL - neovim
-# MAIL - thunderbird
 
 
 ### Notify start
@@ -48,7 +48,7 @@ echo 'Installing...'
 
 
 ### Initialize
-#sh ./init.sh
+#sh ./install-packages.sh
 
 
 ### Load

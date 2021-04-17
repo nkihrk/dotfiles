@@ -3,8 +3,8 @@ echo 'Installing fish plugins...'
 
 # fisher
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-# nvm.fish
-fisher install jorgebucaran/nvm.fish
+# bass (for nvm to work)
+fisher install edc/bass
 # z
 fisher install jethrokuan/z
 # fzf

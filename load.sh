@@ -14,7 +14,7 @@ echo 'All done!'
 
 
 ### Install configs
-echo 'Installing configs...'
+echo 'Loading configs...'
 
 # Load fcitx-mozc configs
 ln -sf ~/.dotfiles/.xprofile ~/.xprofile
@@ -40,7 +40,6 @@ ln -sf ~/.dotfiles/.profile ~/.profile
 
 # Fish configs
 ln -sf ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
-ln -sf ~/.dotfiles/fish/fish_variables ~/.config/fish/fish_variables
 
 
 ### NeoVim
