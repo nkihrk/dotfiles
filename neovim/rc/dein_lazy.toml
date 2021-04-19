@@ -23,58 +23,50 @@ on_ft = 'python'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 hook_add = '''
 	let g:javascript_plugin_jsdoc = 1
 	let g:javascript_plugin_ngdoc = 1
 	let g:javascript_plugin_flow = 1
 '''
-on_ft = 'javascript'
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
-on_ft = ['javascript', 'javascript.jsx']
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 
 [[plugins]]
 repo = 'styled-components/vim-styled-components'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact']
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 [[plugins]]
 repo = 'posva/vim-vue'
-on_ft = 'vue'
-
-
-
-############################################################
-#
-# Syntax highlighting - typescript
-#
-############################################################
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
-on_ft = 'typescript'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 [[plugins]]
 repo = 'mhartington/nvim-typescript'
 build = './install.sh'
-on_ft = 'typescript'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 hook_add = 'let g:nvim_typescript#vue_support = 1'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = 'typescript'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 [[plugins]]
 repo = 'burnettk/vim-angular'
-on_ft = 'typescript'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 hook_add = '''
 	let g:angular_find_ignore = ['build/', 'dist/']
 '''
 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
-on_ft = 'typescriptreact'
+on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 hook_add = '''
 	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 '''

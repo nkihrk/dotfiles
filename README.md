@@ -51,31 +51,31 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 ### Install fish plugins
 
-[bass](https://github.com/edc/bass)
+bass[(https://github.com/edc/bass)](https://github.com/edc/bass)
 
 ```
 fisher install edc/bass
 ```
 
-[z](https://github.com/jethrokuan/z)
+z[(https://github.com/jethrokuan/z)](https://github.com/jethrokuan/z)
 
 ```
 fisher install jethrokuan/z
 ```
 
-[fzf](https://github.com/jethrokuan/fzf)
+fzf[(https://github.com/jethrokuan/fzf)](https://github.com/jethrokuan/fzf)
 
 ```
 fisher install jethrokuan/fzf
 ```
 
-[fish-bd](https://github.com/0rax/fish-bd)
+fish-bd[(https://github.com/0rax/fish-bd)](https://github.com/0rax/fish-bd)
 
 ```
 fisher install 0rax/fish-bd
 ```
 
-[fish-ghq](https://github.com/decors/fish-ghq)
+fish-ghq[(https://github.com/decors/fish-ghq)](https://github.com/decors/fish-ghq)
 
 ```
 fisher install decors/fish-ghq
