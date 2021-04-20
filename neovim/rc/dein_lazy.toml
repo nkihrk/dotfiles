@@ -56,9 +56,6 @@ hook_add = '''
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
 on_ft = 'typescriptreact'
-hook_add = '''
-	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-'''
 
 
 
