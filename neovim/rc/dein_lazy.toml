@@ -48,12 +48,6 @@ repo = 'HerringtonDarkholme/yats.vim'
 on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
 [[plugins]]
-repo = 'mhartington/nvim-typescript'
-build = './install.sh'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
-hook_add = 'let g:nvim_typescript#vue_support = 1'
-
-[[plugins]]
 repo = 'leafgarland/typescript-vim'
 on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
 
