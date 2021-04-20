@@ -75,7 +75,7 @@ fish-bd ([https://github.com/0rax/fish-bd](https://github.com/0rax/fish-bd))
 fisher install 0rax/fish-bd
 ```
 
-fish-ghq ([https://github.com/decors/fish-ghq)](https://github.com/decors/fish-ghq))
+fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-ghq))
 
 ```
 fisher install decors/fish-ghq
