@@ -10,8 +10,6 @@ rm -rf ~/.config/fish/functions/* 2> /dev/null
 rm -rf ~/.config/nvim 2> /dev/null
 rm -rf ~/.cache/dein/rc 2> /dev/null
 
-echo 'All done!'
-
 
 ### Install configs
 echo 'Loading configs...'
