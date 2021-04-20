@@ -23,7 +23,7 @@ on_ft = 'python'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
+on_ft = 'javascript'
 hook_add = '''
 	let g:javascript_plugin_jsdoc = 1
 	let g:javascript_plugin_ngdoc = 1
@@ -31,36 +31,31 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'MaxMEllon/vim-jsx-pretty'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
-
+repo = 'posva/vim-vue'
+on_ft = 'vue'
 
 [[plugins]]
 repo = 'styled-components/vim-styled-components'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
-
-[[plugins]]
-repo = 'posva/vim-vue'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
+on_ft = 'vue'
 
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
+on_ft = 'typescript'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
-
-[[plugins]]
-repo = 'burnettk/vim-angular'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
-hook_add = '''
-	let g:angular_find_ignore = ['build/', 'dist/']
-'''
+on_ft = 'typescript'
 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
-on_ft = ['javascript', 'javasciript.jsx', 'typescript', 'typescriptreact', 'vue']
+on_ft = 'typescriptreact'
+hook_add = '''
+	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+'''
+
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+on_ft = 'typescriptreact'
 hook_add = '''
 	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 '''
