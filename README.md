@@ -6,87 +6,87 @@
 To know deeply about Garuda Linux, please check [their official website](https://garudalinux.org/).
 <br>
 
-Head Up:
+Heads Up:
 You need to rewrite user section(email and name) in .gitconfig.
 
 ## Installation
 
 ### Install prerequisites and dependencies
 
-```
+```console
 > sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
 ```
 
 Install tpm to manage tmux plugins
 
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```console
+> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Install dein for neovim
 
-```
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
+```console
+> curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+> sh ./installer.sh ~/.cache/dein
 ```
 
 Install pyenv and pyenv-virtualenv
 
-```
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+```console
+> git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+> git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
 Install nvm
 
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
+```console
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
 ```
 
 Install fisher
 
-```
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```console
+> curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
 ### Install fish plugins
 
 bass ([https://github.com/edc/bass](https://github.com/edc/bass))
 
-```
-fisher install edc/bass
+```console
+> fisher install edc/bass
 ```
 
 z ([https://github.com/jethrokuan/z](https://github.com/jethrokuan/z))
 
-```
-fisher install jethrokuan/z
+```console
+> fisher install jethrokuan/z
 ```
 
 fzf ([https://github.com/jethrokuan/fzf](https://github.com/jethrokuan/fzf))
 
-```
-fisher install jethrokuan/fzf
+```console
+> fisher install jethrokuan/fzf
 ```
 
 fish-bd ([https://github.com/0rax/fish-bd](https://github.com/0rax/fish-bd))
 
-```
-fisher install 0rax/fish-bd
+```console
+> fisher install 0rax/fish-bd
 ```
 
 fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-ghq))
 
-```
-fisher install decors/fish-ghq
+```console
+> fisher install decors/fish-ghq
 ```
 
 ### Load config files
 
 This shell script will automatically create symlinks for config files and apply to appropriate directories.
 
-```
-sh ./load.sh
+```console
+> sh ./load.sh
 ```
 
 # License
