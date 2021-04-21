@@ -10,12 +10,11 @@ rm -rf ~/.config/fish/functions/* 2> /dev/null
 rm -rf ~/.config/nvim 2> /dev/null
 rm -rf ~/.cache/dein/rc 2> /dev/null
 
+echo 'All done!'
+
 
 ### Install configs
-echo 'Loading configs...'
-
-# Load fcitx-mozc configs
-ln -sf ~/.dotfiles/.xprofile ~/.xprofile
+echo 'Installing configs...'
 
 
 # Git config
@@ -34,7 +33,7 @@ ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ### Fish
 
 # Load envs
-ln -sf ~/.dotfiles/.profile ~/.profile
+ln -sf ~/.dotfiles/macosx/.profile ~/.profile
 
 # Fish configs
 ln -sf ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
