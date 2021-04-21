@@ -32,6 +32,17 @@ if not contains -- $HOME/.yarn/bin $fish_user_paths
 end
 
 
+# Set PATH for goenv
+set -x GOENV_ROOT $HOME/.goenv
+if not contains -- $GOENV_ROOT/bin $fish_user_paths
+  set -Ux fish_user_paths $GOENV_ROOT/bin $fish_user_paths
+end
+eval (goenv init - | source)
+if not contains -- $GOENV_ROOT/bin $fish_user_paths
+  set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
+end
+
+
 ## Add $HOME/.pyenv to PYENV_ROOT
 set -Ux PYENV_ROOT $HOME/.pyenv
 ## add $PYENV_ROOT/bin to fish_user_paths
