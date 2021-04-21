@@ -25,8 +25,16 @@ end
 
 
 ## Set NVM_DIR
-function nvm
-    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+switch (uname)
+    case Linux
+			function nvm
+			    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+			end
+    case Darwin
+			function nvm
+			   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+			end
+    case '*'
 end
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
