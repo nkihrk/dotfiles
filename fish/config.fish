@@ -15,7 +15,13 @@ end
 
 
 ## Starship prompt
-source ("/usr/bin/starship" init fish --print-full-init | psub)
+switch (uname)
+    case Linux
+			source ("/usr/bin/starship" init fish --print-full-init | psub)
+    case Darwin
+			source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+    case '*'
+end
 
 
 ## Set NVM_DIR
@@ -234,9 +240,15 @@ if type "wal" >> /dev/null 2>&1
 end
 
 
-## Run paleofetch if session is interactive
-if status --is-interactive
-   paleofetch
+
+switch (uname)
+    case Linux
+			## Run paleofetch if session is interactive
+			if status --is-interactive
+			   paleofetch
+			end
+
+    case '*'
 end
 
 
