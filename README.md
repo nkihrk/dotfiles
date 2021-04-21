@@ -3,11 +3,11 @@
 ## Notice
 
 .dotfiles hosted in this repository might be heavily relay on my Garuda Linux environment.<br>
-To know deeply about Garuda Linux, please check [their official website](https://garudalinux.org/).
+To know deeply about the Garuda Linux, please check [their official website](https://garudalinux.org/).
 <br>
 
 Heads Up:
-You need to rewrite user section(email and name) in .gitconfig.
+You need to rewrite a user section(email and name) in .gitconfig.
 
 ## Installation
 
@@ -16,6 +16,16 @@ You need to rewrite user section(email and name) in .gitconfig.
 ```console
 > sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
 ```
+
+### Load config files
+
+This shell script will automatically create symlinks for config files and apply to appropriate directories.
+
+```console
+> sh ./load.sh
+```
+
+### Install packages
 
 Install tpm to manage tmux plugins
 
@@ -41,6 +51,12 @@ Install nvm
 
 ```console
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
+```
+
+Install goenv
+
+```console
+> git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 ```
 
 Install fisher
@@ -79,14 +95,6 @@ fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-gh
 
 ```console
 > fisher install decors/fish-ghq
-```
-
-### Load config files
-
-This shell script will automatically create symlinks for config files and apply to appropriate directories.
-
-```console
-> sh ./load.sh
 ```
 
 # License
