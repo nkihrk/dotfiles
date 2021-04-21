@@ -97,6 +97,14 @@ fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-gh
 fisher install decors/fish-ghq
 ```
 
+### Go packages
+
+goimports
+
+```console
+go get golang.org/x/tools/cmd/goimports
+```
+
 ### Additional packages
 
 starship ([https://github.com/starship/starship](https://github.com/starship/starship))

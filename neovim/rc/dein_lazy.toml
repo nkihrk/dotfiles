@@ -53,7 +53,16 @@ hook_add ='''
 ############################################################
 
 [[plugins]]
-repo = 'fatih/vim-go'
+repo = 'prabirshrestha/vim-lsp'
+depends = 'vim-lsp-settings'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'mattn/vim-goimports'
 on_ft = ['go']
 
 
