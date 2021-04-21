@@ -242,16 +242,9 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 
-## Import colorscheme from 'wal' asynchronously
-if type "wal" >> /dev/null 2>&1
-   cat ~/.cache/wal/sequences
-end
-
-
-
+## Run paleofetch if session is interactive
 switch (uname)
     case Linux
-			## Run paleofetch if session is interactive
 			if status --is-interactive
 			   paleofetch
 			end

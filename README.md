@@ -14,7 +14,7 @@ You need to rewrite a user section(email and name) in .gitconfig.
 ### Install prerequisites and dependencies
 
 ```console
-> sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
+sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
 ```
 
 ### Load config files
@@ -22,7 +22,7 @@ You need to rewrite a user section(email and name) in .gitconfig.
 This shell script will automatically create symlinks for config files and apply to appropriate directories.
 
 ```console
-> sh ./load.sh
+sh ./load.sh
 ```
 
 ### Install packages
@@ -30,71 +30,79 @@ This shell script will automatically create symlinks for config files and apply 
 Install tpm to manage tmux plugins
 
 ```console
-> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Install dein for neovim
 
 ```console
-> curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-> sh ./installer.sh ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
 ```
 
 Install pyenv and pyenv-virtualenv
 
 ```console
-> git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-> git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
 Install nvm
 
 ```console
-> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
 ```
 
 Install goenv
 
 ```console
-> git clone https://github.com/syndbg/goenv.git $HOME/.goenv
+git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 ```
 
 Install fisher
 
 ```console
-> curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
-### Install fish plugins
+### Fish plugins
 
 bass ([https://github.com/edc/bass](https://github.com/edc/bass))
 
 ```console
-> fisher install edc/bass
+fisher install edc/bass
 ```
 
 z ([https://github.com/jethrokuan/z](https://github.com/jethrokuan/z))
 
 ```console
-> fisher install jethrokuan/z
+fisher install jethrokuan/z
 ```
 
 fzf ([https://github.com/jethrokuan/fzf](https://github.com/jethrokuan/fzf))
 
 ```console
-> fisher install jethrokuan/fzf
+fisher install jethrokuan/fzf
 ```
 
 fish-bd ([https://github.com/0rax/fish-bd](https://github.com/0rax/fish-bd))
 
 ```console
-> fisher install 0rax/fish-bd
+fisher install 0rax/fish-bd
 ```
 
 fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-ghq))
 
 ```console
-> fisher install decors/fish-ghq
+fisher install decors/fish-ghq
+```
+
+### Additional packages
+
+starship ([https://github.com/starship/starship](https://github.com/starship/starship))
+
+```console
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
 # License
