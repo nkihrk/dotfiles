@@ -55,6 +55,11 @@ eval (goenv init - | source)
 if not contains -- $GOENV_ROOT/bin $fish_user_paths
   set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
 end
+# Set go's bin path
+if not contains -- $GOPATH/bin $fish_user_paths
+  set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
+end
+
 
 
 ## Add $HOME/.pyenv to PYENV_ROOT
