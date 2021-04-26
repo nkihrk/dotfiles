@@ -133,12 +133,6 @@ prettier
 yarn global add prettier
 ```
 
-import-sort-cli
-
-```shell
-yarn global add import-sort-cli
-```
-
 ### Additional packages
 
 starship ([https://github.com/starship/starship](https://github.com/starship/starship))

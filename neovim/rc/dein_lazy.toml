@@ -81,22 +81,6 @@ on_ft = ['dockerfile']
 
 ############################################################
 #
-# Utility - javascript + alpha
-#
-############################################################
-
-[[plugins]]
-repo ='ruanyl/vim-sort-imports'
-on_ft = ['typescript', 'javascript']
-hook_add = '''
-	" enable auto sort import on write
-	let g:import_sort_auto = 1
-'''
-
-
-
-############################################################
-#
 # Syntax highlighting - javascript + alpha
 #
 ############################################################
