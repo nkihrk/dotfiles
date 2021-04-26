@@ -13,7 +13,7 @@ You need to rewrite a user section(email and name) in .gitconfig.
 
 ### Install prerequisites and dependencies
 
-```console
+```shell
 sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
 ```
 
@@ -21,7 +21,7 @@ sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
 
 This shell script will automatically create symlinks for config files and apply to appropriate directories.
 
-```console
+```shell
 sh ./load.sh
 ```
 
@@ -29,39 +29,39 @@ sh ./load.sh
 
 Install tpm to manage tmux plugins
 
-```console
+```shell
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Install dein for neovim
 
-```console
+```shell
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 ```
 
 Install pyenv and pyenv-virtualenv
 
-```console
+```shell
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
 Install nvm
 
-```console
+```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v-1.37.2/install.sh | bash
 ```
 
 Install goenv
 
-```console
+```shell
 git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 ```
 
 Install fisher
 
-```console
+```shell
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
@@ -69,31 +69,31 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 bass ([https://github.com/edc/bass](https://github.com/edc/bass))
 
-```console
+```shell
 fisher install edc/bass
 ```
 
 z ([https://github.com/jethrokuan/z](https://github.com/jethrokuan/z))
 
-```console
+```shell
 fisher install jethrokuan/z
 ```
 
 fzf ([https://github.com/jethrokuan/fzf](https://github.com/jethrokuan/fzf))
 
-```console
+```shell
 fisher install jethrokuan/fzf
 ```
 
 fish-bd ([https://github.com/0rax/fish-bd](https://github.com/0rax/fish-bd))
 
-```console
+```shell
 fisher install 0rax/fish-bd
 ```
 
 fish-ghq ([https://github.com/decors/fish-ghq](https://github.com/decors/fish-ghq))
 
-```console
+```shell
 fisher install decors/fish-ghq
 ```
 
@@ -101,15 +101,49 @@ fisher install decors/fish-ghq
 
 goimports
 
-```console
+```shell
 go get golang.org/x/tools/cmd/goimports
+```
+
+### npm packages
+
+neovim
+
+```shell
+npm -g i neovim
+```
+
+typescript
+
+```shell
+npm -g i typescript
+```
+
+### yarn packages
+
+eslint
+
+```shell
+yarn global add eslint
+```
+
+prettier
+
+```shell
+yarn global add prettier
+```
+
+import-sort-cli
+
+```shell
+yarn global add import-sort-cli
 ```
 
 ### Additional packages
 
 starship ([https://github.com/starship/starship](https://github.com/starship/starship))
 
-```console
+```shell
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
