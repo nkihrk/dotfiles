@@ -51,4 +51,9 @@ mkdir ~/.cache/dein/rc
 ln -sf ~/.dotfiles/neovim/rc/dein.toml ~/.cache/dein/rc/dein.toml
 ln -sf ~/.dotfiles/neovim/rc/dein_lazy.toml ~/.cache/dein/rc/dein_lazy.toml
 
+
+### Starship config
+ln -sf ~/.dotfiles/starship.toml ~/.config/starship.toml
+
+
 echo 'All done!'
