@@ -96,20 +96,20 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescript', 'typescriptreact']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript', 'typescriptreact']
+
+[[plugins]]
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 
 [[plugins]]
 repo = 'styled-components/vim-styled-components'
-on_ft = ['vue']
-
-[[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-on_ft = ['typescript']
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
+on_ft = ['vue', 'typescriptreact']
 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'

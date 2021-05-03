@@ -2,12 +2,6 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-" 256color and truecolor support for tmux
-"set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
-"set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
-"set t_Co=256                         " Enable 256 colors
-"set termguicolors                    " Enable GUI colors for the terminal to get truecolor
-
 set fileencoding=utf-8
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
@@ -72,7 +66,7 @@ set number
 set tabstop=2
 set shiftwidth=2
 
-" Set no wrape
+" Set no wrap
 set nowrap
 
 " Link vim's internal clipboard with system
@@ -88,6 +82,7 @@ if has('gui')
   set guioptions-=L
   set guioptions-=b
 endif
+
 
 if !&compatible
   set nocompatible
@@ -127,17 +122,14 @@ if dein#load_state('~/.cache/dein')
   call dein#save_state()
 endif
 
-filetype plugin indent on
-
 " If you want to install not-installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
 
+" To enable filetype-plugins and indent scripts
+" https://vi.stackexchange.com/questions/10124/what-is-the-difference-between-filetype-plugin-indent-on-and-filetype-indent
+filetype plugin indent on
+
 " Enable syntax highlighting
 syntax enable
-"highlight Normal ctermbg=none
-"highlight NonText ctermbg=none
-"highlight LineNr ctermbg=none
-"highlight Folded ctermbg=none
-"highlight EndOfBuffer ctermbg=none
