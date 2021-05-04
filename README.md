@@ -133,12 +133,6 @@ prettier
 yarn global add prettier
 ```
 
-next
-
-```shell
-yarn global add next
-```
-
 ### Additional packages
 
 starship ([https://github.com/starship/starship](https://github.com/starship/starship))
