@@ -198,7 +198,13 @@ repo = 'edkolev/tmuxline.vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-hook_add = 'highlight SignColumn guibg=none ctermbg=none'
+hook_add = '''
+  " Set update time for vim-gitgutter
+  " https://www.reddit.com/r/vim/comments/3ql651/what_do_you_set_your_updatetime_to/
+  set updatetime=750
+
+  highlight SignColumn guibg=none ctermbg=none
+'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'

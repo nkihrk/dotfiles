@@ -7,10 +7,6 @@ set fileencodings=ucs-boms,utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 
-" Set update time for vim-gitgutter
-" https://www.reddit.com/r/vim/comments/3ql651/what_do_you_set_your_updatetime_to/
-set updatetime=750
-
 " Disable scratch preview window
 set completeopt-=preview
 
