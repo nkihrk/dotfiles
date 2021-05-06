@@ -99,9 +99,9 @@ hook_add = '''
 	let g:ale_sign_warning = '--'
 
 	" Use ALE as completion sources for all code.
-	call deoplete#custom#option('sources', {
-		\ '_': ['ale'],
-		\})
+	" call deoplete#custom#option('sources', {
+	" 	\ '_': ['ale'],
+	" 	\})
 '''
 
 [[plugins]]

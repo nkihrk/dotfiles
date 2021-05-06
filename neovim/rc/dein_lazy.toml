@@ -53,6 +53,18 @@ hook_add ='''
 ############################################################
 
 [[plugins]]
+repo = 'prabirshrestha/async.vim'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+on_ft = ['go']
+
+[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 depends = 'vim-lsp-settings'
 on_ft = ['go']
