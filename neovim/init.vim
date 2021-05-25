@@ -28,9 +28,6 @@ set autoread
 " No swap files
 set noswapfile
 
-" Show commands you input
-set showcmd
-
 " Auto completion with tab
 set wildmenu
 
