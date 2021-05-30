@@ -66,9 +66,6 @@ repo = 'tpope/vim-surround'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'tpope/vim-obsession'
-
-[[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
 	let g:ale_linters = {

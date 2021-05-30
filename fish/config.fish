@@ -17,9 +17,9 @@ end
 ## Starship prompt
 switch (uname)
     case Linux
-			source ("/usr/bin/starship" init fish --print-full-init | psub)
+      source ("/usr/bin/starship" init fish --print-full-init | psub)
     case Darwin
-			source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+      source ("/usr/local/bin/starship" init fish --print-full-init | psub)
     case '*'
 end
 
@@ -27,13 +27,13 @@ end
 ## Set NVM_DIR
 switch (uname)
     case Linux
-			function nvm
-			    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-			end
+      function nvm
+        bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+      end
     case Darwin
-			function nvm
-			   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-			end
+      function nvm
+         bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+      end
     case '*'
 end
 set -x NVM_DIR ~/.nvm
@@ -76,7 +76,7 @@ status --is-interactive; and pyenv virtualenv-init - | source
 ## To prevent fzf from comflicting with other functions' keybinds
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
-set -U FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
+set -U FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!{.git,node_modules}/*'"
 set -U FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 
 
@@ -86,6 +86,25 @@ function ghq_fzf_repo -d 'Repository search'
   [ -n "$select" ]; and cd "$select"
   echo " $select "
   commandline -f repaint
+end
+
+
+function vrg
+  set EX_CMD (
+        set FL 0
+        while read -d : -l fn ln line
+            if test $FL = "0"
+                printf "e %s" "$fn"
+                set FL 1
+            else
+                printf "|tabnew %s" "$fn"
+            end
+            printf "|silent :%d" "$ln"
+        end < (rg -n "$argv[1]" | peco --select-1 | psub)
+    )
+    if test -n "$EX_CMD"
+      nvim -c "$EX_CMD"
+    end
 end
 
 
@@ -117,20 +136,20 @@ end
 
 ## rewrite emails of the git logs
 function rewrite_email_git
-	git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='40584391+nkihrk@users.noreply.github.com'; GIT_COMMITTER_EMAIL='40584391+nkihrk@users.noreply.github.com';" --tag-name-filter cat -- --all
+  git filter-branch --force --env-filter "GIT_AUTHOR_EMAIL='40584391+nkihrk@users.noreply.github.com'; GIT_COMMITTER_EMAIL='40584391+nkihrk@users.noreply.github.com';" --tag-name-filter cat -- --all
 end
 
 
 ## rewrite names of the git logs
 function rewrite_name_git
-	git filter-branch --force --env-filter "GIT_AUTHOR_NAME='nkihrk'; GIT_COMMITTER_NAME='nkihrk';" --tag-name-filter cat -- --all
+  git filter-branch --force --env-filter "GIT_AUTHOR_NAME='nkihrk'; GIT_COMMITTER_NAME='nkihrk';" --tag-name-filter cat -- --all
 end
 
 
 ## fish key bindings
 function fish_user_key_bindings
   bind \cg ghq_fzf_repo
-	bind \cr 'peco_select_history (commandline -b)'
+  bind \cr 'peco_select_history (commandline -b)'
 end
 
 
@@ -177,8 +196,8 @@ end
 function copy
     set count (count $argv | tr -d \n)
     if test "$count" = 2; and test -d "$argv[1]"
-	set from (echo $argv[1] | trim-right /)
-	set to (echo $argv[2])
+  set from (echo $argv[1] | trim-right /)
+  set to (echo $argv[2])
         command cp -r $from $to
     else
         command cp $argv
@@ -250,10 +269,9 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 ## Run paleofetch if session is interactive
 switch (uname)
     case Linux
-			if status --is-interactive
-			   paleofetch
-			end
-
+      if status --is-interactive
+        paleofetch
+        end
     case '*'
 end
 
