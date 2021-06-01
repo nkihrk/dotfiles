@@ -89,6 +89,7 @@ function ghq_fzf_repo -d 'Repository search'
 end
 
 
+## nvim + ripgrep
 function vrg
   set EX_CMD (
         set FL 0
@@ -143,6 +144,18 @@ end
 ## rewrite names of the git logs
 function rewrite_name_git
   git filter-branch --force --env-filter "GIT_AUTHOR_NAME='nkihrk'; GIT_COMMITTER_NAME='nkihrk';" --tag-name-filter cat -- --all
+end
+
+
+## unzipped zips with valid Japanese characters via unzip-conv
+function unzipjp
+  unzip -O CP932 $argv -d (dirname $argv)
+end
+
+function unzipjp-all
+  for zip in *.zip
+    unzipjp (echo $zip)
+  end
 end
 
 

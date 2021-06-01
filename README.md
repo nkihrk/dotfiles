@@ -14,7 +14,7 @@ You need to rewrite a user section(email and name) in .gitconfig.
 ### Install prerequisites and dependencies
 
 ```shell
-sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq
+sudo pacman -S alacritty tmux fish neovim fzf ripgrep ghq unzip-iconv
 ```
 
 ### Load config files
