@@ -1,3 +1,6 @@
+## command timeout set to 1s for NodeJS
+command_timeout = 10000
+
 ## FIRST LINE/ROW: Info & Status
 # First param ─┌
 [username]

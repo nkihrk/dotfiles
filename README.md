@@ -105,6 +105,14 @@ goimports
 go get golang.org/x/tools/cmd/goimports
 ```
 
+### Python packages
+
+jedi (must be python3)
+
+```shell
+pip3 install jedi --upgrade
+```
+
 ### npm packages
 
 neovim
