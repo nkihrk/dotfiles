@@ -110,7 +110,25 @@ go get golang.org/x/tools/cmd/goimports
 jedi (must be python3)
 
 ```shell
-pip3 install jedi --upgrade
+pip3 install jedi
+```
+
+autopep8
+
+```shell
+pip3 install autopep8
+```
+
+black
+
+```shell
+pip3 install black
+```
+
+isort
+
+```shell
+pip3 install isort
 ```
 
 ### npm packages
