@@ -138,11 +138,6 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    backgroundColor: '#000',
-
-    transparentBg: {
-      WebkitFilter: 'blur(5px)', opacity: '0.3'
-    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -151,7 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperlinks", "hyper-drop-file", "hyperterm-material", "hyper-transparent-bg"],
+  plugins: ["hyperlinks", "hyper-drop-file", "hyper-atom-dark-transparent"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
