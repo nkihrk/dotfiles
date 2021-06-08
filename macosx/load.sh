@@ -21,8 +21,8 @@ echo 'Installing configs...'
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
 
-## Alacritty
-ln -sf ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+## Hyper
+ln -sf ~/.dotfiles/.hyper.js ~/.hyper.js
 
 
 ### Tmux
