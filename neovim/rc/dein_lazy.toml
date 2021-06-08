@@ -169,16 +169,6 @@ repo = 'mattn/emmet-vim'
 on_ft = ['html', 'typescriptreact']
 
 [[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-on_ft = ['css', 'scss', 'sass']
-hook_add = '''
-	augroup VimCSS3Syntax
-		autocmd!
-		autocmd FileType css setlocal iskeyword+=-
-	augroup END
-'''
-
-[[plugins]]
 repo = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'phtml']
 hook_add = '''
@@ -190,6 +180,20 @@ hook_add = '''
 	let g:closetag_shortcut = '>'
 	let g:closetag_close_shortcut = '<leader>>'
 '''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['css', 'scss', 'sass']
+hook_add = '''
+	augroup VimCSS3Syntax
+		autocmd!
+		autocmd FileType css setlocal iskeyword+=-
+	augroup END
+'''
+
+[[plugins]]
+repo = 'ap/vim-css-color'
+on_ft = ['css', 'scss', 'sass']
 
 
 

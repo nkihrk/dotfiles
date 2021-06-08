@@ -149,7 +149,7 @@ end
 
 ## unzipped zips with valid Japanese characters via unzip-conv
 function unzipjp
-  unzip -O CP932 $argv -d (dirname $argv)
+  exec unzip -O CP932 $argv -d (dirname $argv)
 end
 
 function unzipjp-all
